@@ -1,0 +1,38 @@
+@font-face {
+	font-family: 'handfont';
+	src: url('assets/handfont.eot');
+}
+
+@font-face {
+	font-family: 'handfont';
+	src: url(//:) format('no404'), url('assets/handfont.woff') format('woff'), url('assets/handfont.ttf') format('truetype'), url('assets/handfont.svg#handfont') format('svg');
+}
+
+body { margin: 0; padding: 0; font-family: handfont; color: #444; }
+    #surface { position: relative; margin: 0 auto; width: 600px; }
+        h1 { position: relative; top: 18px; z-index: 2; margin: 0; padding: 0; width: 100%; height: 1.2em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 25px; font-weight: normal; }
+        #lists { position: absolute; top: 50px; left: 400px; z-index: 2; }
+        dl { margin: 0; padding: 0; color: #555; }
+            dt { margin: 0 0 5px 0; padding: 0; font-size: 20px; font-weight: normal; }
+            dd { margin: 0 0 5px 15px; padding: 0; font-size: 17px; cursor: pointer; }
+        #page { float: left; position: relative; z-index: 1; width: 400px; height: 600px; background: url(assets/paper.jpg) no-repeat; }
+        #page { -webkit-transform: rotate(-5deg); -moz-transform: rotate(-5deg); -o-transform: rotate(-5deg); }
+            h2 { position: absolute; top: 56px; left: 77px; margin: 0; font-size: 30px; width: 275px; height: 1.2em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: normal; }
+            ul { position: absolute; top: 116px; left: 80px; margin: 0; padding: 0; width: 275px; list-style: none; }
+                li { position: relative; margin: 0 0 0 25px; padding: 0; font-size: 20px; line-height: 27px; }
+                    li .checkbox { position: absolute; top: 0; left: -25px; display: inline-block; width: 20px; height: 22px; cursor: pointer; background: url(assets/checkbox-unchecked.png) no-repeat; }
+                    li.done .checkbox { background-image: url(assets/checkbox-checked.png); /*text-decoration: line-through;*/ }
+            p { position: absolute; top: 116px; left: 80px; margin: 0; padding: 0; width: 275px; font-size: 20px; line-height: 27px; }
+
+
+[contenteditable]:hover { outline: 1px dotted #999; }
+
+
+.new { opacity: .25; cursor: pointer; }
+.new:hover { opacity: .75; }
+
+
+.trashcan { position: absolute; top: 63px; left: 57px; display: none; width: 15px; height: 19px; cursor: pointer; background: url(assets/trashcan.png) no-repeat; opacity: .25; }
+.trashcan:hover { opacity: .75; }
+li .trashcan { top: 1px; left: -48px; }
+#page:hover .trashcan { display: inline-block; }

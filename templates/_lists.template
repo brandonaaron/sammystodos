@@ -1,0 +1,7 @@
+<dl>
+    <dt>Lists:</dt>
+    <% $.each(lists, function(i, list) { %>
+      <dd class="<%= selected == list.id ? 'selected' : '' %>" data-id="<%= list.id %>"><%= list.name %></dd>
+    <% }); %>
+    <dd class="new" data-type="list">New list</dd>
+</dl>

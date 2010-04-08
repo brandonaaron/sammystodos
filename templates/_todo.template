@@ -1,0 +1,1 @@
+<li data-type="todo" data-id="<%= id %>" class="<%= done ? 'done' : '' %>"><span class="checkbox"></span><span class="trashcan" data-type="todo" data-id="<%= id %>"></span><span contenteditable="true" data-type="todo" data-id="<%= id %>"><%= name %></span></li>

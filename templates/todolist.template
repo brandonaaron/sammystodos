@@ -1,0 +1,8 @@
+<h2 contenteditable="true" data-type="list" data-id="<%= list.id %>"><%= list.name %></h2>
+<span class="trashcan" data-type="list" data-id="<%= list.id %>"></span>
+<ul>
+    <% $.each(todos, function(index, todo) { %>
+      <li data-type="todo" data-id="<%= todo.id %>" class="<%= todo.done ? 'done' : '' %>"><span class="checkbox"></span><span class="trashcan" data-type="todo" data-id="<%= todo.id %>"></span><span contenteditable="true" data-type="todo" data-id="<%= todo.id %>"><%= todo.name %></span></li>
+    <% }); %>
+    <li class="new" data-type="todo">New todo</li>
+</ul>

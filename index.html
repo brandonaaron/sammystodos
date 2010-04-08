@@ -1,0 +1,25 @@
+<!doctype html>
+<html manifest="cache.manifest">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sammy's Todos</title>
+        <link rel="stylesheet" href="app.css" type="text/css" media="screen" charset="utf-8">
+        <script src="lib/jquery-1.4.2.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/sammy.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/sammy.template.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/model.js" type="text/javascript" charset="utf-8"></script>
+        <script src="app.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+            if (!'localStorage' in window) {
+                alert("Oh no! Your browser doesn't support localStorage and probably doesn't support the other cool stuff needed to run this app properly. Sad day :(");
+            }
+        </script>
+    </head>
+    <body>
+        <div id="surface">
+            <h1 contenteditable="true"></h1>
+            <div id="lists"></div>
+            <div id="page"></div>
+        </div>
+    </body>
+</html>
